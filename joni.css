@@ -1,0 +1,215 @@
+#popup_title {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.75em;
+  color: inherit;
+  border: solid 1px var(--panel-header-background);
+  cursor: default;
+  padding: 0em;
+  margin: 0em;
+  background: var(--button-primary-background);
+  color: var(--button-primary) !important;
+  border: solid 1px var(--button-primary-background);
+  border-radius:8px 8px 0px 0px;
+}
+
+#popup_container {
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 300px; 
+  max-width: 600px !important;
+  background: var(--compose-input-background);
+  color: inherit;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  border: solid 3px var(--button-primary-background);
+}
+
+#repeats{
+  padding:10px;
+}
+
+#popup_content {
+  padding: 1em 1.75em;
+  margin: 0em;
+}
+
+#popup_message {
+  margin: 0px auto;
+  line-height: 14pt;
+}
+
+#popup_panel {
+  text-align: center;
+  margin: 1em 0em 0em 1em;
+}
+
+#popup_prompt {
+  margin: 0.5em 0em;
+}
+
+#popup_ok {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  color: inherit;
+  background: var(--button-primary-background);
+  color: var(--button-primary) !important;
+  margin:5px;
+  cursor: pointer;
+}
+
+#popup_cancel {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  color: inherit;
+  background: var(--button-primary-background);
+  color: var(--button-primary) !important;
+  margin:5px;
+  cursor: pointer;
+}
+
+#popup_container INPUT[type="button"] {
+  width: auto;
+  min-width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  color: inherit;
+  background: var(--button-primary-background);
+  color: var(--button-primary) !important;
+}
+
+#popup_overlay {
+  background: var(--panel-header-background);
+  opacity: 0.8 !important;
+}
+
+
+.yoni-dropdown-content {
+  display: none;
+  position: absolute;
+  transform-origin: right top;
+  transform: scale(1);
+  opacity: 1;
+  padding: 9px 0;
+  background-color: var(--dropdown-background);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(var(--shadow-rgb),.26),0 2px 10px 0 rgba(var(--shadow-rgb),.16);
+  min-width: 160px;
+  z-index: 1000000;
+  animation: fadeIn .3s;
+}
+
+.yoni-dropdown-sub-items{
+  position: absolute;
+  transform-origin: right top;
+  transform: scale(1);
+  opacity: 1;
+  padding: 9px 0;
+  background-color: var(--dropdown-background);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px 0 rgba(var(--shadow-rgb),.26),0 2px 10px 0 rgba(var(--shadow-rgb),.16);
+  min-width: 160px;
+  z-index: 1000001;
+  animation: fadeIn .3s;
+}
+
+.tdmobilenum{
+  direction:ltr;
+}
+
+.yoni-main-top-notes {
+  width: 35%;
+  display: none;
+  position:absolute;
+  top:59px;
+  transform: scale(1);
+  opacity: 1;
+  padding: 9px 0;
+  border-radius: 0px 0px 15px 15px;
+  background-color: var(--panel-background);/*var(--dropdown-background);*/
+  /*box-shadow: 0 2px 5px 0 rgba(var(--shadow-rgb),.26),0 2px 10px 0 rgba(var(--shadow-rgb),.16);*/
+  z-index: 1000000;
+  /*animation: fadeIn .3s;*/
+}
+
+[dir=rtl] .yoni-main-top-notes{
+  left:0px;
+}
+
+[dir=ltr] .yoni-main-top-notes{
+  right:0px;
+}
+
+
+.yoni-templates {
+  /*width: calc(100% - 7px);*/
+  display: none;
+  position:absolute;
+  /*bottom:0px;*/
+  transform: scale(1);
+  opacity: 1;
+  padding: 9px 0;
+  /*left:0px;*/
+  border-radius: 15px 15px 0px 0px;
+  background-color: var(--panel-background);/*;var(--compose-input-background);/*var(--background-default);/*var(--compose-panel-background);/*var(--dropdown-background);*/
+  /*box-shadow: 2px 0px 0px 0px rgba(var(--shadow-rgb),.26),0px 0px 0px 0px rgba(var(--shadow-rgb),.16);*/
+  z-index: 100;
+  /*animation: fadeIn .1s;*/
+  
+}
+
+[dir=rtl] #gadonYONItemplatesMsgs{
+  /*float:right;*/
+  float:right;
+  margin-right:7px;
+}
+
+[dir=ltr] #gadonYONItemplatesMsgs{
+  /*float:left;*/
+  float:left;
+  margin-left:7px;
+}
+
+
+
+/*[dir=ltr] .yoni-templates{
+  left: 1px;
+}
+
+[dir=rtl] .yoni-templates{
+  right: 1px;
+}*/
+
+[dir=ltr] #gadonYonitemplatesAdd{
+  margin-right:5px;float:right;
+}
+
+[dir=rtl] #gadonYonitemplatesAdd{
+  margin-left:5px;float:left;
+}
+
+
+.floating-action{
+  fill:var(--icon-panel) !important;
+}
+
+
+@keyframes fadeIn {0% {opacity:0;}100% {opacity:1;}}
+@keyframes fadeOut {0% {opacity:1;}100% {opacity:0;}}
+
+.yoni-dropdown-content div {
+  color:var(--primary);
+  text-decoration: none;
+  display: block;
+}
+
+.yoni-dropdown-content div:hover {background-color:var(--dropdown-background-hover)}
+
+.yoni-show {display:block;}

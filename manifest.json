@@ -1,0 +1,55 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 3,
+    "short_name": "JONI",
+    "name": "JONI",
+    "version": "10.5.0",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "permissions": [
+        "identity",
+        "identity.email",
+        "tabs",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "host_permissions": [
+        "https://joni.pyrogss.com/api/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "webhook/firebase-app.js",
+                "webhook/firebase-database.js",
+                "loader.js"
+            ],
+            "css": [
+                "joni.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "serviceworker.js"
+    },
+    "icons": {
+        "16": "imgs/16.png",
+        "32": "imgs/32.png",
+        "128": "imgs/128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "/imgs/*.png",
+                "*.js",
+                "*.css"
+            ],
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ]
+        }
+    ]
+}
